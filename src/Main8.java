@@ -4,7 +4,7 @@
  */
 public class Main8 {
     public static void main(String[] args) {
-//ここの下は変数を使っています。        
+        //ここの下は変数を使っています。        
         String name = "榊原 寛隆";
         String birthplace = "愛知県";
         String favoritefood = "寿司";
@@ -18,8 +18,8 @@ public class Main8 {
         birthplace = "北海道";
         favoritefood = "ラーメン";
 
-            System.out.println("===== 自己紹介 =====");
-            System.out.println("名前:\t" + name + "\n出身地:\t" + birthplace + "\n好きな食べ物:\t" + favoritefood);
+        System.out.println("===== 自己紹介 =====");
+        System.out.println("名前:\t" + name + "\n出身地:\t" + birthplace + "\n好きな食べ物:\t" + favoritefood);
         
 
     }

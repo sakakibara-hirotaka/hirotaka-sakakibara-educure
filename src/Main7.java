@@ -12,9 +12,9 @@ public class Main7 {
         old = 15;
         mail = "ichiro@example.com";
 
-            System.out.println("名前:" + name) ;
-            System.out.println("年齢:" + old +"歳") ;
-            System.out.println("メールアドレス" + mail);
+        System.out.println("名前:" + name) ;
+        System.out.println("年齢:" + old +"歳") ;
+        System.out.println("メールアドレス:" + mail);
 
     }
 }

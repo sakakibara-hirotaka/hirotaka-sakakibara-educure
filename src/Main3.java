@@ -1,9 +1,16 @@
-/*このプログラムはHelloWorldと表示させるプログラムです */
+/**このプログラムはHello,World!と表示させるプログラムです。
+ * @author sakakibara hirotaka
+ */
+
 public class Main3 {
-    /**Main3のクラスです */
     public static void main(String[] args) {
 
- //この下のコードがHelloWerldと表示させるコードです
+        /*
+        この下のコードは、「Hello,World!」という文字列を
+        表示する処理をしています。
+        */
+
+        //printlnで改行して表示されます
         System.out.println("Hello, World!");
     } 
 }
