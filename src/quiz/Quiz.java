@@ -30,6 +30,6 @@ public class Quiz {
         }
         
         System.out.println("クイズ終了!");
-        System.out.println(total+ "門中" + answer + "問正解でした。!");    
+        System.out.println(total+ "門中" + answer + "問正解でした!");    
     }   
 }
