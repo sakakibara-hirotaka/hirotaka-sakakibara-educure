@@ -1,0 +1,83 @@
+5-5.txt
+
+問題１
+
+educure_db=# SELECT name,salary
+educure_db-# FROM employees
+educure_db-# WHERE salary >= 50000;
+   name    | salary
+-----------+--------
+ 山田 太郎 |  55000
+ 佐藤 健   |  60000
+ 鈴木 花子 |  52000
+ 田中 一郎 |  58000
+(4 行)
+
+
+問題２　
+
+educure_db=# SELECT name AS "社員名", salary AS "給与額" FROM employees;
+   社員名    | 給与額
+-------------+--------
+ 山田 太郎   |  55000
+ 小林 美智子 |  48000
+ 佐藤 健     |  60000
+ 鈴木 花子   |  52000
+ 田中 一郎   |  58000
+(5 行)
+
+
+問題3
+
+educure_db=# UPDATE employees
+educure_db-# SET department = '営業'
+educure_db-# WHERE name = '田中 一郎';
+UPDATE 1
+educure_db=# SELECT *
+educure_db-# FROM employees;
+ employee_id |    name     |   department   | salary | hire_date  | manager_id
+-------------+-------------+----------------+--------+------------+------------
+           1 | 山田 太郎   | 営業           |  55000 | 2022-01-15 |
+           2 | 小林 美智子 | 人事           |  48000 | 2023-04-01 |
+           3 | 佐藤 健     | IT             |  60000 | 2021-06-10 |
+           4 | 鈴木 花子   | マーケティング |  52000 | 2020-11-20 |
+           5 | 田中 一郎   | 営業           |  58000 | 2019-03-15 |
+(5 行)
+
+
+問題4
+
+educure_db=# DELETE FROM employees
+educure_db-# WHERE department = '人事';
+DELETE 1
+educure_db=# SELECT *
+educure_db-# FROM employees;
+ employee_id |   name    |   department   | salary | hire_date  | manager_id
+-------------+-----------+----------------+--------+------------+------------
+           1 | 山田 太郎 | 営業           |  55000 | 2022-01-15 |
+           3 | 佐藤 健   | IT             |  60000 | 2021-06-10 |
+           4 | 鈴木 花子 | マーケティング |  52000 | 2020-11-20 |
+           5 | 田中 一郎 | 営業           |  58000 | 2019-03-15 |
+(4 行)
+
+
+問題5
+
+educure_db=# INSERT INTO employees(name, department, salary, hire_date)
+educure_db-# VALUES ('鳥山 信夫', 'IT', 60000, '2023-09-15');
+INSERT 0 1
+educure_db=# INSERT INTO employees (name, department, salary, hire_date)
+educure_db-#  VALUES ('山本 三郎', '開発', 58000, '2023-09-20');
+INSERT 0 1
+educure_db=#  SELECT *
+educure_db-# FROM employees;
+ employee_id |   name    |   department   | salary | hire_date  | manager_id
+-------------+-----------+----------------+--------+------------+------------
+           1 | 山田 太郎 | 営業           |  55000 | 2022-01-15 |
+           3 | 佐藤 健   | IT             |  60000 | 2021-06-10 |
+           4 | 鈴木 花子 | マーケティング |  52000 | 2020-11-20 |
+           5 | 田中 一郎 | 営業           |  58000 | 2019-03-15 |
+           6 | 鳥山 信夫 | IT             |  60000 | 2023-09-15 |
+           7 | 山本 三郎 | 開発           |  58000 | 2023-09-20 |
+(6 行)
+
