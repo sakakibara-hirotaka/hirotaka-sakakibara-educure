@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width" initial-scale="1">
+    <meta name="description" content="興味があることについてのアンケート"> 
+    <title>興味があることについてのアンケート</title>
+</head>
+
+<body>
+    <h1><strong> 興味があることについてのアンケート</strong></h1>
+    <form action="/submit" method="post" name="forml">
+        <div>
+            名前: <input type="text" placeholder="名前">    
+        </div> 
+
+        <div>
+            メールアドレス: <input type="email" placeholder="メールアドレス">   
+        </div> 
+
+        <div>
+            性別: <input type="radio" name="gender" value="1">男性
+            <input type="radio" name="gender" value="2">女性
+        </div>
+
+        <div>
+            興味のある分野: <input type="checkbox" name="country" value="1">技術
+            <input type="checkbox" name="country" value="2">芸術
+            <input type="checkbox" name="country" value="3">科学
+        </div>
+
+        <div>
+        国: <select name="country">
+            <option value="1">日本</option>
+            <option value="2">アメリカ</option>
+            <option value="3">イギリス</option> 
+            </select>
+        </div>
+
+        <div>
+            <p>コメント:</p>
+            <textarea rows="4" cols="50" placeholder="テスト"> </textarea>
+        </div>
+
+    <div>
+        <input type="submit" value="送信">
+    </div>
+    </form>
+</body>
+</html>
