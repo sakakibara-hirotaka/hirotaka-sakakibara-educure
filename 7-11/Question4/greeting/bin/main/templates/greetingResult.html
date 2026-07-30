@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-select=1.0">
+<title>こんにちは</title>
+</head>
+
+<body>
+<h1 th:text="|こんにちは、${name}さん!|"></h1>
+<a th:href="@{/greeting}">戻る</a>
+</body>
+</html>

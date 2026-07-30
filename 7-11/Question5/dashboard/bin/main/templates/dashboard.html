@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+
+<body>
+<h1>顧客情報</h1>
+<p>名前：<span th:text="${name}"></span></p>
+メールアドレス:<span th:text="${mail}"></span>
+
+<h2>商品リスト</h2>
+<ul>
+    <li th:each="item : ${itemList}">
+    <span th:text="${item.product}"></span> - ¥<span th:text="${item.price}"></span>
+    </li>
+</ul>
+</body>
+</html>

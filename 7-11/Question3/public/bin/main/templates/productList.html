@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>商品リスト</title>
+</head>
+
+<body>
+<h1>商品一覧</h1>
+<ul>
+    <li th:each="product : ${products}">
+    <a th:href="@{/product/{id}(id=${product.id})}"
+       th:text="|${product.name} -¥${product.price}|"></a>
+</li>
+</ul>
+</body>
+</html>
