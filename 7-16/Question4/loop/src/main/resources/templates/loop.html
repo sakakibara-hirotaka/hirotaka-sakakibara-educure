@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf">
+<head>
+    <meta charset="UTF-8">
+    <title>ループ</title>
+</head>
+
+<body>
+<h1>Items List</h1>
+<ul>
+    <li th:each="item : ${items}" th:text="${item}"></li>
+</ul>
+</body>
+</html>

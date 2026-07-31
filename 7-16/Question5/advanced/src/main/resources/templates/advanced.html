@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    
+<head>
+    <meta lang="ja">
+</head>
+
+<body>
+    <h1>User Info</h1>
+    <p th:text="|Name: ${users.name}|"></p>
+    <p th:text="|Role: ${users.role}|"></p>
+    <p th:if="${users.status == 'ACTIVE'}">User is active</p>
+
+    <h2>Products</h2>
+    <table border="1">
+        <th>Product Name</th>
+        <th>Price</th>
+        <tr th:each="products, stat : ${productList}">
+            <td th:text="${products.name}"></td>
+            <td th:text="${products.price}"></td>
+        </tr>
+    </table>
+</body>
+</html>
