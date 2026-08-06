@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>メッセージ</title>
+</head>
+</html>
+
+<body>
+    <h1>Message Form</h1>
+<form method="get" action="/message/result">
+    <label for="name">名前: </label>
+    <input type="text" id="name" name="name"></input>
+
+    <p>
+        <label for="message">メッセージ: </label>
+        <input type="text" id="message" name="message"></input>
+    </p>
+
+    <button type="submit">送信</button>
+    </form>
+</body>

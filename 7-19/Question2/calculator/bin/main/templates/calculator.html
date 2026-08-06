@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>計算機</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <form method="post" action="/result">
+        <div>
+            <label>Number1:</label>
+            <input type="text" name="number1">
+        </div>
+        
+        <div>
+        <label>Number2:</label>
+        <input type="text" name="number2">
+        </div>
+
+        <div>
+            <label for="cal">Operation:</label>
+
+            <select name="operation" id="cal">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+</body>
+</html>

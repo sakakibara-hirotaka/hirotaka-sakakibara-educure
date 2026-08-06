@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>  
+    <meta charset="UTF-8">
+    <title>カラーフォーム</title>
+</head>
+
+<body>
+    <h1>色選択フォーム</h1>
+    <form method="get" action="/color/result">
+
+    <div>
+        <label>名前: </label>
+        <input type="text" name="name">
+    </div>
+    <br>
+
+    <div>
+    <label>好きな色: </label>
+    <select name="color">
+        <option value="赤">赤</option>
+        <option value="青">青</option>
+        <option value="緑">緑</option>
+        <option value="黄">黄</option>
+    </select>
+    </div>
+    <br>
+
+    <button type="submit">送信</button>
+    </form>
+</body>
+</html>

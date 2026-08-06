@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http:///www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>メッセージ結果</title>
+</head>
+
+<body>
+    <h1>Message Result</h1>
+    <form method="get" action="message-form">
+    <p>名前: <span th:text="${userName}"></span></p>
+    <p>メッセージ: <span th:text="${message}"></span></p>
+</body>
+</html>

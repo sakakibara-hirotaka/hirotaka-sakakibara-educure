@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品詳細</title>
+</head>
+
+<body>
+<h1>商品詳細</h1>
+
+        <p th:text="|ID: ${product.id}|"></p>
+        <p th:text="|名前: ${product.name}|"></p>   
+        <p th:text="|価格: ${product.price}円|"></p>
+
+        <a href="/products">←商品一覧に戻る</a>
+</body>
+</html>

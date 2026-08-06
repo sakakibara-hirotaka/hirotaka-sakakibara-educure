@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>計算結果</title>
+</head>
+
+<body>
+    <h1>Calcularion Result</h1>
+
+    <div th:if="${operation == '+'}">
+        <p th:text="|Result: ${number1 + number2}|"></p>
+    </div>
+
+    <div th:if="${operation == '-'}">
+        <p th:text="|Result: ${number1 - number2}|"></p>
+    </div>
+
+    <div th:if="${operation == '*'}">
+        <p th:text="|Result: ${number1 * number2}|"></p>
+    </div>
+
+    <div th:if="${number2 != 0 and operation == '/'}">
+        <p th:text="|Result: ${number1 / number2}|"></p>
+    </div>
+
+    <div th:if="${number2 == 0 and operation == '/'}">
+        <p>Error:Division by zero is not allowed.</p>
+    </div>
+
+    <a th:href="@{/calculator}">GO back to the calculator</a>
+</body>
+</html>
