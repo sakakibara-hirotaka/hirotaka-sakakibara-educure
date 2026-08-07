@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>プロフィール編集</title>
+</head>
+<body>
+    <h1>プロフィール編集</h1>
+    
+    <form method="post" th:action="@{/profile/check}" th:object="${form}">
+        <input type="hidden" th:field="*{id}">
+
+        <div>
+            <label>名前:</label>
+            <input type="text" th:field="*{name}">
+        </div>
+
+        <div>
+            <label>年齢:</label>
+            <input type="text" th:field="*{age}">
+        </div>
+
+        <div>
+            <label>自己紹介:</label>
+            <textarea th:field="*{bio}"></textarea>
+        </div>
+
+        <button type="submit">確認</button>
+    </form>
+
+    
+
+    
+</body>
+</html>
