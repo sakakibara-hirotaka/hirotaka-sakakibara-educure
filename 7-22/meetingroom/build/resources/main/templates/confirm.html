@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>予約内容確認</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>予約内容確認</h1>
+        <form th:action="@{/check}" method="post" th:object="${form}">
+            <ul>
+                <li th:text="|会議室名: ${check.roomName}|"></li>
+            
+                <li th:text="|利用開始日時: ${check.startDateTime}|"></li>
+
+                <li th:text="|利用終了日時: ${check.endDateTime}|"></li>
+
+                <li th:text="|利用人数: ${check.peopleCount}|"></li>
+            </ul>
+            
+        </form>
+
+    </body>
+
+</html>
