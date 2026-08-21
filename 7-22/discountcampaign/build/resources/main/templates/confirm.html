@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>キャンペーン確認</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>キャンペーン確認</h1>
+
+        <ul>
+            <li th:text="|キャンペーン名: ${check.name}|"></li>
+            <li th:text="|割引種別: ${check.type}|"></li>
+            <li th:text="|割引値: ${check.value}|"></li>
+            <li th:text="|開始日: ${check.startDate}|"></li>
+            <li th:text="|終了日: ${check.endDate}|"></li>
+        </ul>
+    </body>
+</html>
